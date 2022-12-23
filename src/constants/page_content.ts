@@ -1,5 +1,5 @@
 export const PageContent = {
-  title: "Nombre de la tienda",
+  title: "Tienda",
   footer: "© Copyright 2022 BruFat. Todos los derechos reservados",
   categories: "Categorías",
   productGallery: "Todos los productos",

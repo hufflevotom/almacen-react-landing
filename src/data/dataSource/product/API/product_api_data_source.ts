@@ -14,17 +14,22 @@ export default class ProductAPIDataSourceImpl implements ProductDataSource {
     offset: number,
     busqueda: string
   ): Promise<Product[]> {
+    const products: Product[] = [];
     let response = await httpClient.get<ResponseProduct>(
       `${apiUrl.Almacen.Productos.getAll}?limit=${limit}&offset=${offset}${
         busqueda && busqueda !== "" ? `&busqueda=${busqueda}` : ""
       }`
     );
-    return response.data.body[0].map((item) => ({
-      description: item.descripcion || "",
-      id: item.id,
-      imgUrl: item.urlImagen || "",
-      price: parseFloat(item.precioMenor),
-      title: item.nombre || "",
-    }));
+    response.data.body[0].forEach((item) => {
+      if (item.precioMenor !== null)
+        products.push({
+          description: item.descripcion || "",
+          id: item.id,
+          imgUrl: item.urlImagen || "",
+          price: parseFloat(item.precioMenor),
+          title: item.nombre || "",
+        });
+    });
+    return products;
   }
 }
