@@ -3,7 +3,6 @@ import { useAppDispatch } from "../../../app/store/hooks";
 import { getCategories } from "../redux/category.slice";
 import { getProducts } from "../redux/product.slice";
 import CategoriesSection from "./categories_section.view";
-import ProductDetails from "./product_details.view";
 import ProductGallery from "./product_gallery.view";
 
 function Home() {
@@ -18,7 +17,6 @@ function Home() {
     <>
       <CategoriesSection />
       <ProductGallery />
-      <ProductDetails />
     </>
   );
 }

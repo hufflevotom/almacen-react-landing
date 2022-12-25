@@ -4,7 +4,7 @@ import { Categories, Title } from "../components";
 function Header() {
   return (
     <div
-      className="w-full px-16 py-4 shadow-lg"
+      className="w-full px-6 lg:px-16 py-4 shadow-lg"
       style={{ backgroundColor: Colors[5], color: Colors[6] }}
     >
       <div className="flex flex-row justify-between items-center">

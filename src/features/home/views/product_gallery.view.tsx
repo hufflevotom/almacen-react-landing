@@ -8,7 +8,7 @@ function ProductGallery() {
   const loading = useAppSelector((state) => state.product.loading);
 
   return (
-    <div className="w-full px-20 py-10" style={{ color: Colors[6] }}>
+    <div className="w-full px-2 py-10 lg:px-10" style={{ color: Colors[6] }}>
       <div className="px-8 text font-bold text-2xl mb-6">
         {PageContent.productGallery}
       </div>
@@ -17,7 +17,7 @@ function ProductGallery() {
           {PageContent.loading}...
         </div>
       ) : (
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grd-cols-1 lg:grid-cols-3 gap-10 lg:gap-8">
           {products.map((item) => (
             <div className="px-8 h-full">
               <Product product={item} />

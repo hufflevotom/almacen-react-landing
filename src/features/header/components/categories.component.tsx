@@ -12,7 +12,7 @@ function Categories() {
   };
 
   return (
-    <Menu as="div" className="relative inline-block text-left">
+    <Menu as="div" className="relative inline-block text-left hidden lg:block">
       <div>
         <Menu.Button className="inline-flex w-full justify-center rounded-md px-8 py-2 text-sm font-medium text-gray-700 focus:outline-none">
           {PageContent.categories}
