@@ -2,9 +2,11 @@
 
 function Title() {
   return (
-    <div className="text font-bold text-2xl px-2 lg:px-4 ">
+    <div className="text font-bold text-2xl px-2 lg:px-4">
       {/* {PageContent.title} */}
-      <img src="/logoTitle.png" alt="logo" className="h-8 inline-block" />
+      <a href="https://jambelectronics.com">
+        <img src="/logoTitle.png" alt="logo" className="h-8 inline-block" />
+      </a>
     </div>
   );
 }
