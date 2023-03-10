@@ -1,5 +1,5 @@
-import { Colors } from "../../../constants/styles";
-import { useAppSelector } from "../../../app/store/hooks";
+import { Colors } from "../../../../constants/styles";
+import { useAppSelector } from "../../../../app/store/hooks";
 
 const CategoryImage = () => {
   const category = useAppSelector((state) => state.category.selectedCategory);
@@ -7,7 +7,7 @@ const CategoryImage = () => {
   return (
     <>
       {category?.imgUrl ? (
-        <div className="w-full flex flex-col justify-center items-center m-2">
+        <div className="w-full flex flex-col justify-center items-center m-0">
           <img
             src={category?.imgUrl}
             className="h-full w-full object-cover object-center"

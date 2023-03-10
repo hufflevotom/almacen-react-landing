@@ -17,7 +17,7 @@ function NavPages() {
               ? "px-3 py-2 rounded-md text-base font-bold"
               : "px-3 hover:cursor-pointer py-2 rounded-md text-base font-medium"
           }
-          style={{ color: selectedPage === page ? Colors[2] : Colors[1] }}
+          style={{ color: selectedPage === page ? Colors[2] : Colors[6] }}
           onClick={() => dispatch(selectPage(page))}
         >
           {page.name}

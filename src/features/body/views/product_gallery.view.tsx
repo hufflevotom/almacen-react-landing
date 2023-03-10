@@ -1,7 +1,7 @@
 import { Colors } from "../../../constants/styles";
 import { PageContent } from "../../../constants/page_content";
 import { useAppSelector } from "../../../app/store/hooks";
-import { Product } from "../components";
+import { Product } from "./components";
 
 function ProductGallery() {
   const products = useAppSelector((state) => state.product.products);

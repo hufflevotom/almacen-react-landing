@@ -1,11 +1,11 @@
 import { FunctionComponent, useEffect, useState } from "react";
-import { Colors } from "../../../constants/styles";
-import { AppProps } from "../../../app/utils/AppProps";
-import { backendUrl } from "../../../constants/enviroment";
-import { Product as ProductModel } from "../../../domain/model/product";
-import { useAppDispatch } from "../../../app/store/hooks";
-import { selectProduct } from "../redux/product.slice";
-import ProductDetails from "../views/product_details.view";
+import { Colors } from "../../../../constants/styles";
+import { AppProps } from "../../../../app/utils/AppProps";
+import { backendUrl } from "../../../../constants/enviroment";
+import { Product as ProductModel } from "../../../../domain/model/product";
+import { useAppDispatch } from "../../../../app/store/hooks";
+import { selectProduct } from "../../redux/product.slice";
+import ProductDetails from "../product_details.view";
 
 interface ProductProps extends AppProps {
   product: ProductModel;

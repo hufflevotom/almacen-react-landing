@@ -1,4 +1,4 @@
-import { useAppSelector } from "../../../app/store/hooks";
+import { useAppSelector } from "../../../../app/store/hooks";
 
 const CategoryDescription = () => {
   const category = useAppSelector((state) => state.category.selectedCategory);

@@ -1,4 +1,5 @@
 export const PageContent = {
+  //* Titles
   title: "Tienda",
   footer: "© Copyright 2022 BruFat. Todos los derechos reservados",
   categories: "Categorías",
@@ -11,18 +12,20 @@ export const PageContent = {
   askForWhatsapp: "Cotizar por Whatsapp",
   aboutUs: "Nosotros",
   mission: "Misión",
-  missionContent:
-    "Aprovechar el mundo globalizado y poner en tus manos los productos más novedosos para tu proyecto audiovisual.",
   vision: "Visión",
-  visionContent:
-    "Convertirse en líder proveedor de productos de calidad, a la vanguardia de la tecnología en audio y video.",
   contactUs: "Contáctanos",
   callUs: "Llámanos",
-  phoneNumbers: ["+51 123 456 789", "+51 123 456 789"],
   location: "Ubicación",
-  locationContent: "Calle, Lima, Perú",
   email: "Correo electrónico",
-  emailContent: "abc@mail.com",
   businessHours: "Horario de atención",
+
+  //* Content
+  missionContent:
+    "Aprovechar el mundo globalizado y poner en tus manos los productos más novedosos para tu proyecto audiovisual.",
+  visionContent:
+    "Convertirse en líder proveedor de productos de calidad, a la vanguardia de la tecnología en audio y video.",
+  phoneNumbers: ["+51 123 456 789", "+51 123 456 789"],
+  locationContent: "Calle, Lima, Perú",
+  emailContent: "",
   businessHoursContent: "Lunes a Viernes de 9:00 a 18:00 hrs",
 };

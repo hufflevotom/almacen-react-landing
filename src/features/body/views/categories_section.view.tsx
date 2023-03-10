@@ -4,7 +4,7 @@ import {
   CategoryDescription,
   CategoryImage,
   CategorySelector,
-} from "../components";
+} from "./components";
 import { selectCategory } from "../redux/category.slice";
 
 function CategoriesSection() {
@@ -19,7 +19,7 @@ function CategoriesSection() {
   return (
     <>
       {categories.length > 0 && category?.imgUrl && category?.description ? (
-        <div className="w-full">
+        <div className="w-full flex m-0 p-0">
           <div className="w-2/6">
             <CategorySelector />
             <CategoryDescription />

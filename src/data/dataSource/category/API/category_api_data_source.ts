@@ -23,7 +23,7 @@ export default class CategoryAPIDataSourceImpl implements CategoryDataSource {
     );
     const categories = [
       {
-        description: "",
+        description: "Todos los productos",
         id: 0,
         imgUrl: "",
         name: "TODOS",
