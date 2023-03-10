@@ -1,5 +1,5 @@
 import { Provider } from "react-redux";
-import { Footer, Header, Home } from "../features";
+import { Footer, Header, Body } from "../features";
 import { Container } from "./components";
 import { store } from "./store/store";
 import 'react-photo-view/dist/react-photo-view.css';
@@ -9,7 +9,7 @@ function App() {
     <Provider store={store}>
       <Container>
         <Header />
-        <Home />
+        <Body />
         <Footer />
       </Container>
     </Provider>

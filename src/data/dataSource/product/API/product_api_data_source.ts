@@ -21,7 +21,7 @@ export default class ProductAPIDataSourceImpl implements ProductDataSource {
       }`
     );
     response.data.body[0].forEach((item) => {
-      if (item.precioMenor !== null)
+      if (item.precioMenor !== null && parseFloat(item.precioMenor) > 0)
         products.push({
           description: item.descripcion || "",
           id: item.id,

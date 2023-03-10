@@ -1,4 +1,4 @@
 export interface CategoryAPIEntity {
-  id?: number;
+  id: number;
   nombre: string;
 }

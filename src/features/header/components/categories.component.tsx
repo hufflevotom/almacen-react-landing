@@ -2,20 +2,25 @@ import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { PageContent } from "../../../constants/page_content";
-import { useAppSelector } from "../../../app/store/hooks";
+import { useAppDispatch, useAppSelector } from "../../../app/store/hooks";
+import { selectCategory } from "../../body/redux/category.slice";
 
 function Categories() {
   const categories = useAppSelector((state) => state.category.categories);
+  const selectedCategory = useAppSelector(
+    (state) => state.category.selectedCategory
+  );
+  const dispatch = useAppDispatch();
 
   const classNames = (...classes: string[]) => {
     return classes.filter(Boolean).join(" ");
   };
 
   return (
-    <Menu as="div" className="relative inline-block text-left hidden lg:block">
+    <Menu as="div" className="relative inline-block text-left lg:block">
       <div>
         <Menu.Button className="inline-flex w-full justify-center rounded-md px-8 py-2 text-sm font-medium text-gray-700 focus:outline-none">
-          {PageContent.categories}
+          {selectedCategory ? selectedCategory.name : PageContent.categories}
           <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
         </Menu.Button>
       </div>
@@ -34,11 +39,11 @@ function Categories() {
               <Menu.Item>
                 {({ active }) => (
                   <a
-                    href="#"
                     className={classNames(
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
                       "block px-4 py-2 text-sm"
                     )}
+                    onClick={() => dispatch(selectCategory(item))}
                   >
                     {item.name}
                   </a>

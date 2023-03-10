@@ -21,11 +21,24 @@ export default class CategoryAPIDataSourceImpl implements CategoryDataSource {
         busqueda && busqueda !== "" ? `&busqueda=${busqueda}` : ""
       }`
     );
-    return response.data.body[0].map((item) => ({
-      description: "",
-      id: item.id,
-      imgUrl: "",
-      name: item.nombre,
-    }));
+    const categories = [
+      {
+        description: "",
+        id: 0,
+        imgUrl: "",
+        name: "TODOS",
+      },
+    ];
+
+    response.data.body[0].forEach((item) => {
+      categories.push({
+        description: "",
+        id: item.id,
+        imgUrl: "",
+        name: item.nombre,
+      });
+    });
+
+    return categories;
   }
 }

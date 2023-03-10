@@ -1,7 +1,10 @@
+import { useAppSelector } from "../../../app/store/hooks";
 import { Colors } from "../../../constants/styles";
-import { Categories, Title } from "../components";
+import { Categories, NavPages, Title } from "../components";
 
 function Header() {
+  const selectedPage = useAppSelector((state) => state.structure.selectedPage);
+
   return (
     <div
       className="w-full px-6 lg:px-16 py-4 shadow-lg"
@@ -10,10 +13,15 @@ function Header() {
       <div className="flex flex-row justify-between items-center">
         <div className="flex flex-row items-center">
           <Title />
-          <Categories />
+          {/* {selectedPage && selectedPage.name === "Tienda" ? (
+            <Categories />
+          ) : null} */}
         </div>
-        {/* // TODO: Pending approval */}
-        {/* <div className="flex flex-row items-center"><Cart /></div> */}
+        <div className="flex flex-row items-center">
+          <NavPages />
+          {/* // TODO: Pending approval */}
+          {/* <Cart /> */}
+        </div>
       </div>
     </div>
   );

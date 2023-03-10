@@ -41,7 +41,7 @@ const Product: FunctionComponent<ProductProps> = ({ product }) => {
           <h1 className="title-font text-md font-medium mb-1 uppercase">
             {product.title}
           </h1>
-          <p className="font-bold text-md">
+          <p className="font-bold text-md" style={{ color: Colors[2] }}>
             {new Intl.NumberFormat("es-PE", {
               style: "currency",
               currency: "PEN",

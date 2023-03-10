@@ -59,7 +59,7 @@ const ProductDetails: FunctionComponent<ProductDetailsProps> = ({
                 leaveFrom="opacity-100 translate-y-0 md:scale-100"
                 leaveTo="opacity-0 translate-y-4 md:translate-y-0 md:scale-95"
               >
-                <Dialog.Panel className="flex w-full transform text-left text-base transition md:my-8 md:max-w-2xl md:px-4 lg:max-w-4xl">
+                <Dialog.Panel className="flex w-full transform text-left text-base transition md:my-8 md:max-w-2xl md:px-4 lg:max-w-2xl">
                   <div className="relative flex w-full items-start overflow-hidden bg-white shadow-2xl">
                     <button
                       type="button"
@@ -109,7 +109,10 @@ const ProductDetails: FunctionComponent<ProductDetailsProps> = ({
                           <p className="text-md text-gray-900 py-4 px-8 sm:pr-12">
                             {product?.description || ""}
                           </p>
-                          <p className="text-2xl text-gray-900 w-full text-right pr-8 lg:pr-12">
+                          <p
+                            className="text-2xl text-gray-900 w-full text-right pr-8 lg:pr-12"
+                            style={{ color: Colors[2] }}
+                          >
                             {new Intl.NumberFormat("es-PE", {
                               style: "currency",
                               currency: "PEN",
@@ -117,16 +120,16 @@ const ProductDetails: FunctionComponent<ProductDetailsProps> = ({
                           </p>
                         </section>
 
-                        <section
+                        {/* <section
                           aria-labelledby="options-heading"
                           className="mt-8 lg:mt-4 flex flex-row align-center justify-end pr-8 lg:pr-12"
                         >
-                          {/* //TODO: Add to bag */}
-                          {/* <button
+                           //TODO: Add to bag 
+                          <button
                           className="mt-6 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                         >
                           {PageContent.addToBag}
-                        </button> */}
+                        </button> 
                           <button
                             className="flex w-auto items-end justify-center rounded-md border border-transparent py-2 px-4 text-sm text-white"
                             style={{ backgroundColor: Colors[1] }}
@@ -134,7 +137,7 @@ const ProductDetails: FunctionComponent<ProductDetailsProps> = ({
                           >
                             {PageContent.askForWhatsapp}
                           </button>
-                        </section>
+                        </section> */}
                       </div>
                     </div>
                   </div>
