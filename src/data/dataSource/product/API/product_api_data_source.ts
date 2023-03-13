@@ -20,6 +20,7 @@ export default class ProductAPIDataSourceImpl implements ProductDataSource {
         busqueda && busqueda !== "" ? `&busqueda=${busqueda}` : ""
       }`
     );
+    // TODO: quitar paginacion
     response.data.body[0].forEach((item) => {
       if (item.precioMenor !== null && parseFloat(item.precioMenor) > 0)
         products.push({
