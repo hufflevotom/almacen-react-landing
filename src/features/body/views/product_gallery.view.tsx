@@ -1,7 +1,8 @@
+import { useAppSelector } from "../../../app/store/hooks";
 import { Colors } from "../../../constants/styles";
 import { PageContent } from "../../../constants/page_content";
-import { useAppSelector } from "../../../app/store/hooks";
 import { Product } from "./components";
+import GallerySearchInput from "./components/gallery_searchInput.component";
 
 function ProductGallery() {
   const products = useAppSelector((state) => state.product.products);
@@ -12,8 +13,13 @@ function ProductGallery() {
       className="w-full px-2 py-10 lg:px-10 min-h-screen"
       style={{ color: Colors[6] }}
     >
-      <div className="px-8 text font-bold text-3xl mb-6">
-        {PageContent.productGallery}
+      <div className="w-full flex flex-row justify-between">
+        <div className="px-8 text font-bold text-3xl mb-6">
+          {PageContent.productGallery}
+        </div>
+        <div className="px-8 text font-bold text-3xl mb-6 w-1/2">
+          <GallerySearchInput />
+        </div>
       </div>
       {loading ? (
         <div

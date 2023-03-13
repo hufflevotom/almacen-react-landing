@@ -4,6 +4,8 @@ export const PageContent = {
   footer: "© Copyright 2022 BruFat. Todos los derechos reservados",
   categories: "Categorías",
   productGallery: "Todos los productos",
+  search: "Buscar",
+  searchPlaceholder: "Nombre, descripción...",
   noProducts: "No se encontraron productos",
   loading: "Cargando",
   close: "Cerrar",
